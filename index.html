@@ -6,53 +6,29 @@
   <title>Special Birthday Surprise</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.2.0/luxon.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>🎉 A Magical Surprise Awaits You, Bebo! 🎉</h1>
     
-    <!-- First chest for Egypt time -->
-    <div id="gift-box-egypt" class="gift-box">
-      <h2>Open After 12 AM Egypt Time</h2>
-      <img src="https://media.istockphoto.com/id/1160778039/photo/treasure-chest-open-ancient-trunk-with-glowing-magic-lights-in-the-dark.jpg?s=1024x1024&w=is&k=20&c=JDRxYFp82XfNq6x-utYgIrb01jZULIEWI5cTPF27380=" alt="Magic Chest" style="width: 150px;">
-    </div>
-    
-    <!-- Second chest for US time -->
-    <div id="gift-box-us" class="gift-box">
-      <h2>Open After 12 AM US Time</h2>
-      <img src="https://media.istockphoto.com/id/1160778039/photo/treasure-chest-open-ancient-trunk-with-glowing-magic-lights-in-the-dark.jpg?s=1024x1024&w=is&k=20&c=JDRxYFp82XfNq6x-utYgIrb01jZULIEWI5cTPF27380=" alt="Magic Chest" style="width: 150px;">
+    <!-- Chest 1: Egypt Time -->
+    <div class="gift-box" id="chest1">
+      <a href="chest1.html">
+        <img src="https://media.istockphoto.com/id/1160778039/photo/treasure-chest-open-ancient-trunk-with-glowing-magic-lights-in-the-dark.jpg?s=1024x1024&w=is&k=20&c=JDRxYFp82XfNq6x-utYgIrb01jZULIEWI5cTPF27380=" alt="Magic Chest" style="width: 150px;">
+      </a>
+      <h2>Open after 12 AM Egypt Time</h2>
     </div>
 
-    <p id="message" class="hidden">Click the chests to open your magical birthday surprise after 12 AM!</p>
-
-    <!-- Letter for Egypt -->
-    <div id="letter-egypt" class="hidden letter">
-      <h2>To My Dearest Sister and My Soulmate ❤, Bebo 🪄</h2>
-      <p>Happy 24th Birthday! 🎉</p>
-      <p>Every moment we've shared in the past 24 years has been magical. You are not just my sister but my soulmate, my anchor, and my source of light in this world. You’ve been a constant source of love, support, and inspiration to me, and I honestly can’t imagine my life without you.</p>
-      <p>Your laughter is the most beautiful sound, your kindness lights up the darkest days, and your determination leaves me in awe. Even though we're miles apart right now, my heart is always with you. Every day I think about how proud I am of you and how much I miss you being here by my side.</p>
-      <p>This letter has been in the making for days, carefully crafted with all the love in the world because you deserve nothing less. I hope today reminds you of how truly loved and cherished you are—not just by me, but by everyone whose life you've touched.</p>
-      <p>Thank you for being the sister every girl dreams of having. Thank you for being my forever friend and partner in all our crazy adventures. And most of all, thank you for being YOU.</p>
-      <p>With all the love in the world, and then some more, your sister who loves you endlessly.</p>
-      <p>Nour</p>
-    </div>
-
-    <!-- Letter for US -->
-    <div id="letter-us" class="hidden letter">
-      <h2>My dearest Bebo, my everything, Bebo 🪄</h2>
-      <p>It’s finally here .. your day. The day the world became brighter, happier, and infinitely better because you were born. I’ve been trying to write this letter for days, piece by piece, knowing that no matter how many words I find, they’ll never come close to describing how much you mean to me.</p>
-      <p>24 years ago, my life changed forever in the best way possible. You became the center of my world, my constant, my safe place. I was only two when you came into my life, but even then, I knew you were special. It’s as if my heart expanded just for you.</p>
-      <p>And now, as I write this, the distance between us feels both unbearable and surreal. Since you left, there’s been this quiet ache in my chest, a Bebo-shaped space that nothing else can fill. But having you home for those 40 days? Oh, they were pure magic. Every laugh, every shared moment, every conversation filled me with so much joy, I didn’t even realize how much I’d missed it until you were there again.</p>
-      <p>You’ve always been more than just my sister. You’re my best friend, my confidante, my partner-in-crime. The one who knows my heart without me ever having to speak. I look at you, and I see the most extraordinary human being I know; someone who carries so much strength, grace, and kindness in everything she does. I don’t just love you; I admire you, deeply.</p>
-      <p>Watching you chase your dreams with such fierce determination makes me prouder than words could ever express. You’ve worked so hard to be where you are, and I know this is just the beginning of all the incredible things you’ll achieve. You inspire me, dude, every single day.</p>
-      <p>But what I cherish most is YOU, not just the brilliant scholar, but the sister who’s brought so much love and light into my life. The one who hugs me when words aren’t enough, who shares my joy and my pain, who’s always been my home, no matter where life takes us.</p>
-      <p>I miss you more than I can put into words. Sometimes, I just close my eyes and imagine you here, sitting with me, laughing about something silly, like you’ve never left. And while I know the distance is temporary, it doesn’t make missing you any easier.</p>
-      <p>Bebo, you are my heart walking outside my body. You are my joy, my pride, my everything. I love you with a depth I’ll never fully be able to explain, but I hope you feel it, always. And on this day, your 24th birthday, I want you to know just how much you mean to me. You’ve given me 24 years of love, happiness, and purpose, and I am endlessly grateful for every single one of them.</p>
-      <p>Happy birthday to the most beautiful, brilliant, and loving sister in the world. No matter how far you are, you’ll always be with me. I love you endlessly and beyond, my soulmate ❤️</p>
-      <p>Forever yours,</p>
-      <p>Nour</p>
+    <!-- Chest 2: US Time -->
+    <div class="gift-box" id="chest2">
+      <a href="chest2.html">
+        <img src="https://media.istockphoto.com/id/1160778039/photo/treasure-chest-open-ancient-trunk-with-glowing-magic-lights-in-the-dark.jpg?s=1024x1024&w=is&k=20&c=JDRxYFp82XfNq6x-utYgIrb01jZULIEWI5cTPF27380=" alt="Magic Chest" style="width: 150px;">
+      </a>
+      <h2>Open after 12 AM US Time</h2>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

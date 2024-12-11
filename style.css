@@ -6,13 +6,14 @@ body {
     padding: 0;
     text-align: center;
 }
-  
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
   
 h1 {
@@ -49,13 +50,20 @@ h1 {
     padding: 30px;
     margin: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
-  
+
 .letter h2 {
     color: #ffcc00;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
   
 .letter p {
     font-size: 1.2rem;
     line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f2f2f2;
 }

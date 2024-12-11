@@ -15,13 +15,13 @@ body {
     height: 100vh;
     padding: 20px;
 }
-  
+
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Slightly smaller title for better responsiveness */
     color: #ffcc00;
     margin-bottom: 20px;
 }
-  
+
 .gift-box {
     cursor: pointer;
     margin: 50px;
@@ -36,38 +36,56 @@ h1 {
 
 .gift-box h2 {
     color: #ffcc00;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
-  
+
 .hidden {
     display: none;
 }
-  
+
 .letter {
     background-color: #3e4a60;
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px; /* Reduced padding for better fitting */
     margin: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     max-width: 600px;
+    width: 100%; /* Make the letter container more responsive */
     margin-left: auto;
     margin-right: auto;
-    word-wrap: break-word; /* Ensure text wraps properly and doesn't overflow */
-    text-align: left; /* Align text to the left to avoid any awkward formatting */
-    height: auto; /* Allow letter container to expand based on content */
-    max-height: none; /* Disable height limit to allow full display */
+    word-wrap: break-word;
+    text-align: left;
+    height: auto;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    margin-top: 0;
 }
 
 .letter h2 {
     color: #ffcc00;
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Reduced font size for better fitting */
     margin-bottom: 15px;
 }
-  
+
 .letter p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Smaller font size for better readability */
     line-height: 1.6;
     margin-bottom: 20px;
     color: #f2f2f2;
+}
+
+/* Ensure font scales better on small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .letter h2 {
+        font-size: 1.2rem;
+    }
+
+    .letter p {
+        font-size: 0.9rem;
+    }
 }

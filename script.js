@@ -1,49 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const giftBoxEgypt = document.getElementById("gift-box-egypt");
-    const giftBoxUS = document.getElementById("gift-box-us");
-    const letterEgypt = document.getElementById("letter-egypt");
-    const letterUS = document.getElementById("letter-us");
-    const message = document.getElementById("message");
+  const { DateTime } = luxon;
 
-    // Function to check the current time zone
-    function isAfterMidnight(timezone) {
-        const currentDate = new Date();
-        const utcTime = currentDate.getTime() + currentDate.getTimezoneOffset() * 60000; // Convert to UTC
-        const localDate = new Date(utcTime + (timezone * 3600000)); // Adjust for the given timezone
-        return localDate.getHours() >= 0; // Check if it's after 12 AM
-    }
+  // Check the current time in Egypt and US Eastern Time
+  const egyptTime = DateTime.now().setZone("Africa/Cairo");  // Egypt Time Zone
+  const usTime = DateTime.now().setZone("America/New_York");  // US Eastern Time Zone
+  
+  // 12 AM of the specified time zones
+  const egyptMidnight = egyptTime.set({ hour: 0, minute: 0, second: 0 });
+  const usMidnight = usTime.set({ hour: 0, minute: 0, second: 0 });
 
-    // Check if it's after midnight in Egypt or US time
-    const isEgyptTime = isAfterMidnight(2); // Egypt is UTC +2
-    const isUSTime = isAfterMidnight(-5); // US Eastern Time is UTC -5
+  // Get the current time in milliseconds for comparison
+  const currentTime = DateTime.now();
 
-    // Display corresponding chests based on the time
-    if (isEgyptTime) {
-        giftBoxEgypt.querySelector("h2").textContent = "Click to Open! 🎉";
-    }
-    if (isUSTime) {
-        giftBoxUS.querySelector("h2").textContent = "Click to Open! 🎉";
-    }
+  // Check if it's past midnight for Egypt and US
+  if (currentTime >= egyptMidnight) {
+    // Allow opening chest 1
+    document.getElementById("chest1").style.display = "block";  // Show chest 1
+  } else {
+    // Hide chest 1 if it's not yet time
+    document.getElementById("chest1").style.display = "none";  // Hide chest 1
+  }
 
-    // Gift box click events
-    giftBoxEgypt.addEventListener("click", () => {
-        const magicSound = new Audio('https://www.soundjay.com/button/beep-07.wav');
-        magicSound.play();
-        giftBoxEgypt.classList.add("hidden");
-        letterEgypt.classList.remove("hidden");
-        message.textContent = "Your magical surprise for Egypt time has been revealed! 🪄";
-    });
-
-    giftBoxUS.addEventListener("click", () => {
-        const magicSound = new Audio('https://www.soundjay.com/button/beep-07.wav');
-        magicSound.play();
-        giftBoxUS.classList.add("hidden");
-        letterUS.classList.remove("hidden");
-        message.textContent = "Your magical surprise for US time has been revealed! 🪄";
-    });
-
-    // Optional: Show the message before clicking the gift box
-    setTimeout(() => {
-        message.classList.remove("hidden");
-    }, 1000); // Show message after 1 second
+  if (currentTime >= usMidnight) {
+    // Allow opening chest 2
+    document.getElementById("chest2").style.display = "block";  // Show chest 2
+  } else {
+    // Hide chest 2 if it's not yet time
+    document.getElementById("chest2").style.display = "none";  // Hide chest 2
+  }
 });

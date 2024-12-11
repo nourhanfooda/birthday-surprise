@@ -53,6 +53,10 @@ h1 {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    word-wrap: break-word; /* Ensure text wraps properly and doesn't overflow */
+    text-align: left; /* Align text to the left to avoid any awkward formatting */
+    height: auto; /* Allow letter container to expand based on content */
+    max-height: none; /* Disable height limit to allow full display */
 }
 
 .letter h2 {

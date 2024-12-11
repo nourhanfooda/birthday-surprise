@@ -1,63 +1,92 @@
 body {
-    font-family: 'Cinzel', serif;
-    background-color: #2c2f3f;
-    color: white;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: 'Cinzel', serif;
+  background-color: #2c2f3f;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;  /* Prevent horizontal overflow */
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #ffcc00;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
 }
 
 .gift-box {
-    cursor: pointer;
-    margin: 50px;
+  cursor: pointer;
+  margin: 50px;
 }
 
 .gift-box img {
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 100%;  /* Make image responsive */
+  max-width: 150px;  /* Limit max size */
 }
 
 .letter {
-    background-color: #3e4a60;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 20px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  background-color: #3e4a60;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 80%;  /* Ensure the letter container doesn't stretch too wide */
+  max-width: 800px;  /* Set a max-width for large screens */
+  margin: 0 auto;  /* Center the content */
+  overflow-y: auto;  /* Allow scrolling if the content overflows */
 }
 
 .letter h2 {
-    color: #ffcc00;
+  color: #ffcc00;
+  font-size: 2rem;
 }
 
 .letter p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: left;  /* Align text to the left for better readability */
+  word-wrap: break-word;  /* Ensure words break and don't overflow */
 }
 
 button {
-    background-color: #ffcc00;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 button:hover {
-    background-color: #e6b800;
+  background-color: #e6b800;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .letter {
+    padding: 20px;
+  }
+
+  .letter h2 {
+    font-size: 1.8rem;
+  }
+
+  .letter p {
+    font-size: 1rem;
+  }
+
+  .gift-box img {
+    max-width: 120px;  /* Make chest images smaller on mobile */
+  }
 }
